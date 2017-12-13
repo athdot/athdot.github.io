@@ -4,9 +4,11 @@
 <title>redirecting</title>
   </head>
   <body>
+    <script>
     var url = (window.location != window.parent.location)
             ? document.referrer
             : document.location.href;
             document.write(url);
+    </script>
   </body>
 </html>
