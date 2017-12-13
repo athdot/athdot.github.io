@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-<title>Hi</title>
+<title>redirecting</title>
   </head>
   <body>
-    word
+    var url = (window.location != window.parent.location)
+            ? document.referrer
+            : document.location.href;
+            document.write(url);
   </body>
 </html>
