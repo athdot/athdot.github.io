@@ -8,7 +8,8 @@
     var url = (window.location != window.parent.location)
             ? document.referrer
             : document.location.href;
-            document.write(url);
+    var end = url.split("/")[3];
+      window.location.href = "https://athdot.github.io/" + end;
     </script>
   </body>
 </html>
