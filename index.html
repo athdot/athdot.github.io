@@ -10,7 +10,11 @@
             : document.location.href;
     var end = url.split("/")[3];
       //redirect site to specified url
-      window.location.href = "https://athdot.github.io/" + end;
+      if(end != ""){
+        window.location.href = "https://athdot.github.io/" + end;
+      }else{
+        window.location.href = "https://athdot.github.io/home/"; 
+      }
     </script>
   </body>
 </html>
