@@ -8,7 +8,10 @@
     var url = (window.location != window.parent.location)
             ? document.referrer
             : document.location.href;
-    var end = url.split("/")[3];
+    var end = "";
+      for(var i = 3; i < url.split("/").length; i++){
+        end += url.split("/")[i];
+      }
       //redirect site to specified url
       if(end != ""){
         window.location.href = "https://athdot.github.io/" + end;
