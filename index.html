@@ -9,7 +9,7 @@
             ? document.referrer
             : document.location.href;
     var end = "";
-      for(var i = 2; i < url.split("/").length; i++){
+      for(var i = 3; i < url.split("/").length; i++){
         end += "/" + url.split("/")[i];
       }
       //redirect site to specified url
