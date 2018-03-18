@@ -13,7 +13,7 @@
         end += "/" + url.split("/")[i];
       }
       //redirect site to specified url
-      if(end != ""){
+      if(end != "" && !(url === "https://athdot.tk/") && !(url === "https://athdot.github.io/")){
         window.location.href = "https://athdot.github.io" + end;
       }else{
         window.location.href = "https://athdot.github.io/home/"; 
