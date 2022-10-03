@@ -4,21 +4,17 @@
 <title>redirecting</title>
   </head>
   <body>
-    <frame src='https://athdot.github.io/home'></frame>
     <script>
     var url = (window.location != window.parent.location)
             ? document.referrer
             : document.location.href;
-    var end = "";
-      for(var i = 3; i < url.split("/").length; i++){
-        end += "/" + url.split("/")[i];
-      }
+    var end = url.split("/").last();
       //redirect site to specified url
       if(end != "" && !(url === "https://athdot.tk/") && !(url === "https://athdot.github.io/")){
         alert("Pushing to: " + "https://athdot.github.io" + end)
-        //window.history.pushState("","","https://athdot.github.io" + end);
+        window.history.pushState("","","https://athdot.github.io" + end);
       }else{
-        //window.history.pushState("","","https://athdot.github.io/home");
+        window.history.pushState("","","https://athdot.github.io/home");
       }
     </script>
   </body>
