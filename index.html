@@ -14,9 +14,10 @@
       }
       //redirect site to specified url
       if(end != "" && !(url === "https://athdot.tk/") && !(url === "https://athdot.github.io/")){
-        window.history.pushState("","","https://athdot.github.io" + end);
+        alert("Pushing to: " + "https://athdot.github.io" + end)
+        //window.history.pushState("","","https://athdot.github.io" + end);
       }else{
-        window.history.pushState("","","https://athdot.github.io/home");
+        //window.history.pushState("","","https://athdot.github.io/home");
       }
     </script>
   </body>
