@@ -5,10 +5,10 @@
   </head>
   <body>
     <script>
-    var end = document.URL.split('/').at(-1);
+    var end = document.referrer.split('/').at(-1);
       alert(end);
       //redirect site to specified url
-      if(end != "" && !(document.URL.split('/').at(2) === "athdot.tk") && !(document.URL.split('/').at(2) === "athdot.github.io")){
+      if(end != "" && !(document.referrer.split('/').at(2) === "athdot.tk") && !(document.referrer.split('/').at(2) === "athdot.github.io")){
         alert("Pushing to: " + "https://athdot.github.io" + end)
         window.history.pushState("","","https://athdot.github.io" + end);
       }else{
