@@ -8,7 +8,7 @@
     var url = (window.location != window.parent.location)
             ? document.referrer
             : document.location.href;
-    var end = url.split("/").last();
+    var end = url.split("/").at(-1);
       //redirect site to specified url
       if(end != "" && !(url === "https://athdot.tk/") && !(url === "https://athdot.github.io/")){
         alert("Pushing to: " + "https://athdot.github.io" + end)
