@@ -5,15 +5,7 @@
   </head>
   <body>
     <script>
-    var end = document.referrer.split('/').at(-1);
-      alert(end);
-      //redirect site to specified url
-      if(end != "" && !(document.referrer.split('/').at(2) === "athdot.tk") && !(document.referrer.split('/').at(2) === "athdot.github.io")){
-        alert("Pushing to: " + "https://athdot.github.io" + end)
-        window.history.pushState("","","https://athdot.github.io" + end);
-      }else{
-        window.history.pushState("","","https://athdot.github.io/home");
-      }
+      window.history.pushState("","","http://athdot.tk/EDPS");
     </script>
   </body>
 </html>
