@@ -5,13 +5,10 @@
   </head>
   <body>
     <script>
-    var url = (window.location != window.parent.location)
-            ? document.referrer
-            : document.location.href;
-    var end = url.split("/").at(-1);
+    var end = document.URL.split('/').at(-1);
       alert(end);
       //redirect site to specified url
-      if(end != "" && !(url === "https://athdot.tk/") && !(url === "https://athdot.github.io/")){
+      if(end != "" && !(document.URL.split('/').at(2) === "athdot.tk") && !(document.URL.split('/').at(2) === "athdot.github.io")){
         alert("Pushing to: " + "https://athdot.github.io" + end)
         window.history.pushState("","","https://athdot.github.io" + end);
       }else{
